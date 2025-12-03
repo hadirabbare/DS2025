@@ -1,0 +1,154 @@
+Analyse des Jeux de Données Médicaux : Maladies Cardiaques et Diabète
+Rapport d’analyse descriptive, visualisation et interprétation
+📌 1. Introduction
+
+Ce rapport présente une analyse exploratoire et prédictive de deux jeux de données médicaux largement utilisés en santé publique :
+
+Heart Disease Dataset (Cleveland, UCI Machine Learning Repository)
+Utilisé pour le diagnostic assisté des maladies cardiaques.
+
+Pima Indians Diabetes Dataset (UCI / Kaggle)
+Spécifique à l’étude du diabète chez les femmes âgées de plus de 21 ans.
+
+Ces jeux de données permettent d’illustrer des techniques d’épidémiologie descriptive, de visualisation de données, ainsi que l’application d’algorithmes de Machine Learning, notamment la régression logistique.
+
+📌 2. Présentation des Jeux de Données
+2.1. Heart Disease Dataset (UCI)
+
+Nombre d’observations : ~303 patients (après nettoyage : légèrement moins)
+
+Variables : 14 caractéristiques (âge, sexe, cholestérol, tension, fréquence cardiaque max, etc.)
+
+Variable cible : target (0 = sain, 1 = maladie cardiaque)
+
+Objectif : prédire la présence d'une pathologie cardiaque à partir de paramètres cliniques.
+
+L’auteur original du dataset :
+📌 Dua, D. and Graff, C. (2019). UCI Machine Learning Repository.
+
+2.2. Diabetes Dataset (Pima Indians)
+
+Nombre d’observations : 768 femmes
+
+Variables : 8 caractéristiques (glucose, BMI, pression, insuline, âge, etc.)
+
+Variable cible : Outcome (0 = non diabétique, 1 = diabétique)
+
+Origine: National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK).
+
+📌 3. Analyse Descriptive et Interprétations
+🔹 3.1. Maladies Cardiaques – Visualisations et Interprétations
+Distribution de l’âge selon la maladie
+
+Le graphique Age vs Maladie Cardiaque montre clairement que :
+
+La majorité des patients atteints se trouvent dans une tranche 40–65 ans.
+
+Le risque augmente avec l’âge, ce qui est cohérent avec les connaissances médicales.
+
+Fréquence cardiaque maximale (thalach)
+
+Le boxplot montre que :
+
+Les patients malades ont tendance à avoir une fréquence cardiaque maximale plus faible.
+Cela peut indiquer un manque de performance cardiaque.
+
+Répartition selon le sexe
+
+Les hommes sont plus touchés que les femmes.
+
+La variable sex montre une répartition fortement asymétrique : la maladie cardiaque est beaucoup plus fréquente chez les hommes dans ce dataset.
+
+Corrélations (Heatmap)
+
+Variables les plus corrélées avec la maladie :
+
+cp (douleur thoracique)
+
+thalach (fréquence max)
+
+oldpeak (dépression ST)
+
+exang (angine induite par l’effort)
+
+📌 Ces variables seront donc cruciales pour la modélisation.
+
+🔹 3.2. Diabète – Visualisations et Interprétations
+Niveau de Glucose selon Outcome
+
+Les diabétiques ont des niveaux de glucose nettement plus élevés, ce qui confirme que le glucose est ˗ comme attendu ˗ la variable la plus déterminante.
+
+Indice de Masse Corporelle (BMI)
+
+Le BMI des diabétiques est en moyenne bien plus élevé, confirmant le lien entre surpoids et risque de diabète.
+
+Âge
+
+Les femmes plus âgées sont davantage touchées.
+La tendance est croissante à partir de 30 ans.
+
+Corrélations
+
+La heatmap montre :
+
+forte corrélation glucose ↔ diabète
+
+lien important BMI ↔ diabète
+
+📌 4. Modélisation : Régression Logistique (Heart Disease)
+
+Une régression logistique est appliquée pour prédire la présence d'une maladie cardiaque.
+
+Rapport de classification
+
+Le modèle présente généralement :
+
+Une précision correcte (dépend du dataset nettoyé)
+
+Une bonne capacité à identifier les cas positifs (malades)
+
+Matrice de confusion
+
+Elle permet de visualiser :
+
+les bonnes prédictions
+
+les faux positifs
+
+les faux négatifs (plus graves en médecine car il s’agit de malades non détectés)
+
+📌 Le modèle reste basique mais illustre parfaitement l’utilisation de la statistique dans le diagnostic assisté.
+
+📌 5. Analyse Épidémiologique
+Pour les maladies cardiaques :
+
+Prévalence : environ X% (selon ton exécution)
+
+Âge moyen des malades : plus élevé que celui des individus sains
+
+Les facteurs cliniques comme la douleur thoracique, la fréquence cardiaque max et l’élévation de ST (oldpeak) sont les plus informatifs.
+
+Pour le diabète :
+
+Prévalence : ~34% dans ce dataset
+
+Les diabétiques ont :
+
+un BMI moyen nettement plus élevé
+
+un taux de glucose très supérieur
+Ces deux variables sont les indicateurs les plus puissants.
+
+📌 6. Conclusion
+
+Ce travail montre comment des données médicales peuvent être utilisées pour :
+
+décrire statistiquement une population
+
+identifier les facteurs de risque majeurs
+
+visualiser des relations cliniquement pertinentes
+
+construire un modèle de diagnostic assisté
+
+Les deux datasets étudiés démontrent l’utilité de l’analyse de données en santé publique, notamment dans la prévention, l’épidémiologie et l’aide à la décision médicale.
