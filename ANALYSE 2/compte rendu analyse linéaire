@@ -1,1 +1,130 @@
+Rapport d’Analyse : Performance des Étudiants
 
+Dataset : Student Performance (Multiple Linear Regression)
+Compatible Google Colab
+
+1. Objectif du rapport
+
+Ce rapport présente une analyse complète du dataset Student Performance comprenant :
+
+Exploration des données
+
+Analyse statistique
+
+Régression linéaire multiple
+
+Régression logistique
+
+Visualisations
+
+Interprétations finales et recommandations
+
+Le tout est basé sur le code Python préalablement fourni pour Google Colab.
+
+2. Chargement du dataset
+
+Le dataset est téléchargé via kagglehub puis chargé automatiquement.
+Si le téléchargement échoue, un upload manuel est proposé.
+
+3. Exploration du dataset
+3.1 Dimensions et aperçu
+
+Shape du dataset (nombres de lignes et colonnes)
+
+Aperçu des 5 premières lignes
+
+Type des colonnes : numériques / catégorielles
+
+3.2 Analyse exploratoire
+
+Les graphiques suivants sont générés :
+
+Histogrammes des variables numériques
+
+Matrice de corrélation pour détecter les relations linéaires
+
+Ces analyses permettent de comprendre la distribution et les interactions entre les variables explicatives et la variable cible.
+
+4. Régression Linéaire Multiple
+4.1 Préparation des données
+
+Encodage des variables catégorielles avec LabelEncoder
+
+Standardisation avec StandardScaler
+
+Séparation train/test (80% / 20%)
+
+4.2 Entraînement du modèle
+
+Le modèle de régression linéaire est entraîné sur les données normalisées.
+
+4.3 Performance du modèle
+
+Les métriques calculées sont :
+
+RMSE : mesure l’erreur moyenne de prédiction
+
+R² Score : indique la qualité du modèle (1 = parfait)
+
+Un R² élevé indique que le modèle explique bien la variabilité de la performance étudiante.
+
+4.4 Importance des variables
+
+Un tableau classe les variables en fonction de l’importance absolue de leurs coefficients.
+
+4.5 Visualisations produites
+
+Graphique des valeurs réelles vs valeurs prédictes
+
+Graphique des résidus
+
+Droite de régression sur les deux variables les plus importantes
+
+5. Régression Logistique (Classification)
+
+Comme le dataset contient une variable de performance continue, une nouvelle variable binaire est créée :
+
+Classe 1 : Performance au-dessus de la médiane
+
+Classe 0 : Performance en-dessous de la médiane
+
+5.1 Entraînement du modèle logistique
+
+Le modèle logistic regression est entraîné pour prédire la classe binaire.
+
+5.2 Résultats obtenus
+
+Précision (%) : taux de classifications correctes
+
+Rapport de classification : précision, rappel, F1-score
+
+Matrice de confusion : erreurs par classe
+
+6. Interprétations finales
+6.1 Résultats clés
+
+Le modèle linéaire montre de bonnes performances (R² élevé et RMSE faible).
+
+Le modèle logistique présente un bon taux de précision.
+
+Certaines variables influencent fortement la performance, notamment celles identifiées dans l'analyse d’importance.
+
+6.2 Exemple de prédiction
+
+Une prédiction automatisée est réalisée en utilisant les valeurs moyennes des variables.
+
+6.3 Recommandations
+
+Les variables les plus importantes identifiées doivent être exploitées en priorité lors d'analyses futures.
+
+Le seuil médian est un bon séparateur entre les classes de performance.
+
+Des modèles plus avancés (Random Forest, Gradient Boosting) pourraient améliorer la précision.
+
+7. Conclusion
+
+Le code fourni permet une analyse complète, robuste et automatisée du dataset Student Performance, avec une double approche :
+
+Modélisation prédictive continue (régression linéaire)
+
+Modélisation catégorielle (régression logistique)
