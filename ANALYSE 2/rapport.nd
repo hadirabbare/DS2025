@@ -1,0 +1,90 @@
+Analyse de la Performance des Étudiants
+
+Dataset : Student Performance – Multiple Linear Regression
+
+1. Introduction
+
+L’objectif de cette analyse est d’étudier les facteurs influençant la performance des étudiants à partir du dataset Student Performance. L’étude repose sur une approche complète combinant une analyse exploratoire, une modélisation par régression linéaire multiple et une classification par régression logistique.
+
+Cette démarche vise à identifier les variables les plus déterminantes, à évaluer la qualité prédictive des modèles et à fournir des interprétations pertinentes pour la compréhension du phénomène étudié.
+
+2. Présentation du Dataset
+
+Le dataset contient des informations académiques et personnelles relatives à différents étudiants.
+Les colonnes sont composées de variables :
+
+Numériques : scores, moyennes, heures d’étude, etc.
+
+Catégorielles : statut, type d’étude, etc.
+
+Cible : une variable reflétant la performance académique.
+
+Les dimensions du dataset ainsi que les 5 premières lignes confirment sa structure cohérente et exploitable pour des analyses statistiques et prédictives.
+
+3. Analyse Exploratoire des Données (EDA)
+3.1 Distribution des variables numériques
+
+Une étude des histogrammes montre que certaines variables suivent une distribution relativement normale tandis que d’autres sont asymétriques. Cela indique la présence d’hétérogénéité dans les comportements étudiants.
+
+3.2 Matrice de corrélation
+
+La matrice de corrélation permet d’identifier les relations linéaires entre variables. Certaines corrélations positives significatives apparaissent, notamment entre certains indicateurs académiques et la variable cible, suggérant un potentiel de prédiction intéressant pour le modèle linéaire.
+
+4. Régression Linéaire Multiple
+4.1 Préparation des données
+
+Encodage des variables catégorielles
+
+Standardisation des variables numériques
+
+Séparation du dataset en un ensemble d’entraînement (80 %) et de test (20 %)
+
+4.2 Résultats du modèle
+
+RMSE : indique une erreur de prédiction relativement faible
+
+Coefficient R² élevé : le modèle explique une grande partie de la variance de la variable cible
+
+Coefficients des variables : permettent d’identifier les facteurs ayant le plus d’impact sur la performance étudiante
+
+Les variables les plus importantes ont été identifiées à partir de la magnitude de leurs coefficients.
+
+4.3 Visualisations
+
+Graphique des prédictions versus valeurs réelles
+
+Analyse des résidus
+
+Droites de tendance pour les variables les plus influentes
+
+Ces visualisations confirment la qualité du modèle et l’absence de biais majeur dans les prédictions.
+
+5. Régression Logistique (Classification)
+
+Pour classifier les étudiants en bon niveau et mauvais niveau, un seuil basé sur la médiane de la performance a été utilisé.
+
+5.1 Résultats du modèle
+
+Bonne précision générale
+
+Rapport de classification indiquant un équilibre acceptable entre rappel et précision
+
+Matrice de confusion cohérente et bien structurée
+
+La régression logistique montre une bonne capacité à distinguer les étudiants ayant une performance supérieure ou inférieure à la médiane.
+
+6. Interprétations et Analyse Critique
+
+Les performances scolaires semblent dépendre fortement des indicateurs académiques présents dans le dataset.
+
+Le modèle linéaire multiple montre de très bonnes performances, ce qui suggère une relation bien approximée par une combinaison linéaire de variables.
+
+La classification binaire est également satisfaisante, bien que perfectible selon les variables choisies.
+
+Certains facteurs non inclus dans le dataset (motivation, conditions socio-économiques, soutien familial, etc.) pourraient améliorer la précision si intégrés.
+
+7. Conclusion
+
+Cette étude démontre l’efficacité des techniques de data science pour analyser et prédire la performance étudiante. La régression linéaire multiple a permis de modéliser le phénomène avec une grande fidélité, tandis que la régression logistique a fourni un outil pertinent pour la classification des niveaux de performance.
+
+Les résultats obtenus mettent en lumière les variables les plus importantes et offrent une compréhension approfondie des facteurs qui influencent la réussite académique. Cette analyse constitue une base solide pour la mise en place de stratégies d’amélioration du suivi pédagogique et pour l’orientation des interventions éducatives.
